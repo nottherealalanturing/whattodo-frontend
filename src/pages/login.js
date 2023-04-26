@@ -1,5 +1,5 @@
 import { Box, Flex, Text, Input, Button, Link } from '@chakra-ui/react';
-import NextLink from 'next/link'; // Import Next.js Link component for routing
+import NextLink from 'next/link';
 
 const LoginPage = () => {
   return (
