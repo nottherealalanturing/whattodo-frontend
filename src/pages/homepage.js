@@ -10,10 +10,11 @@ import {
 import { FiPlus } from 'react-icons/fi';
 import GroupCard from '../components/GroupCard';
 import TaskCard from '../components/TaskCard';
-import { useAuth } from '../hooks/useAuth'; // Custom hook for authentication
+//import { useAuth } from '../hooks/useAuth';
 
-const Home = () => {
-  const { user, logout } = useAuth(); // Fetching user details and logout function from authentication hook
+const HomePage = () => {
+  //const { user, logout } = useAuth();
+  const { user, logout } = { user: 'assad', logout: () => {} };
 
   return (
     <Box p={4}>
@@ -29,8 +30,37 @@ const Home = () => {
           onClick={logout}
         />
       </Flex>
+      <Flex mt={4} justify="space-between">
+        <Box w="full" pr={4}>
+          <Heading as="h2" size="md" mb={2}>
+            My Groups
+          </Heading>
+          {/* Render list of group cards */}
+          {/* Example usage of GroupCard component */}
+          <GroupCard
+            groupName="Group 1"
+            groupDescription="Group 1 description"
+            groupOwner="User 1"
+            isOwner={true}
+          />
+        </Box>
+        <Box w="full" pl={4}>
+          <Heading as="h2" size="md" mb={2}>
+            My Tasks
+          </Heading>
+          {/* Render list of task cards */}
+          {/* Example usage of TaskCard component */}
+          <TaskCard
+            taskTitle="Task 1"
+            taskDescription="Task 1 description"
+            taskOwner="User 1"
+            isAssigned={true}
+            taskProgress={50}
+          />
+        </Box>
+      </Flex>
     </Box>
   );
 };
 
-export default Home;
+export default HomePage;
