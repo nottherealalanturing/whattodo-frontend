@@ -25,7 +25,7 @@ const LoginPage = () => {
             Log In
           </Button>
           <Text>
-            Don't have an account?{' '}
+            Don&apos;t have an account?{' '}
             <NextLink href="/signup">
               {' '}
               {/* Added routing to signup page */}
